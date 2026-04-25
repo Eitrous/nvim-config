@@ -13,10 +13,12 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
 	"folke/tokyonight.nvim",
+
 	{
 	  'nvim-lualine/lualine.nvim',
           dependencies = { 'nvim-tree/nvim-web-devicons' }
 	},
+
 	{
           "nvim-neo-tree/neo-tree.nvim",
       	  branch = "v3.x",
@@ -32,6 +34,25 @@ local plugins = {
         
 	  }
   	},
+
+	{
+		"christoomey/vim-tmux-navigator",
+		cmd = {
+			"TmuxNavigateLeft",
+			"TmuxNavigateDown",
+			"TmuxNavigateUp",
+			"TmuxNavigateRight",
+			"TmuxNavigatePrevious",
+			"TmuxNavigatorProcessList",
+		},
+		keys = {
+			{ "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
+			{ "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
+			{ "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
+			{ "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
+			{ "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
+		},
+	}
 }
 local opts = {}
 

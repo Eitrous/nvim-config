@@ -15,3 +15,7 @@ kmp.set("n", "<leader>sh", "<C-w>s")
 
 kmp.set("n", "<leader>nh", ":nohl<CR>")
 
+-- Plugins
+-- nvim-tree
+kmp.set("n", "<leader>f", ":Neotree")
+
